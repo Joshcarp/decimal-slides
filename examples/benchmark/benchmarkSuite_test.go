@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"math"
 	"os"
 	"reflect"
@@ -11,6 +12,7 @@ import (
 
 	"github.com/anz-bank/decimal"
 	ericlagergren "github.com/ericlagergren/decimal"
+	old "github.com/joshcarp/decimal"
 	shopspring "github.com/shopspring/decimal"
 )
 
@@ -39,16 +41,18 @@ type testcase struct {
 }
 
 var prettyNames = map[string]string{
-	"decimal.Decimal64": "anz",
-	"float64":           "float64",
-	"decimal.Decimal":   "shopspringDecimal",
-	"decimal.Big":       "ericlagergrenDecimal"}
+	"decimal.Decimal64anz":      "anz",
+	"float64float":              "float64",
+	"decimal.Decimalshopspring": "shopspringDecimal",
+	"decimal.Bigericlagergren":  "ericlagergrenDecimal",
+	"decimal.Decimal64old":      "oldAnz"}
 
-var typelist = []interface{}{decimal.Decimal64{}, 0.0, shopspring.Decimal{}, ericlagergren.Big{}}
+var typelist = []interface{}{0.0, shopspring.Decimal{}, ericlagergren.Big{}, old.Decimal64{}, decimal.Decimal64{}}
+var stringlist = []string{"float", "shopspring", "ericlagergren", "old", "anz"}
 
 func BenchmarkDecimal(b *testing.B) {
 	// map a type (decimal.Decimal64 eg) to a list of testcases
-	typeMap := make(map[reflect.Type][]testcase)
+	typeMap := make(map[string][]testcase)
 
 	// For every arithmetic test
 	for _, dectest := range testPaths {
@@ -59,23 +63,27 @@ func BenchmarkDecimal(b *testing.B) {
 			testVal := getInput(scanner.Text())
 			if testVal.testName != "" {
 				// for every type
-				for _, t := range typelist {
+				for i, t := range typelist {
 
 					// Convert string to type t
 					a, b := ParseDecimal(testVal.val1, testVal.val2, t)
 
 					// Add to map
-					typeMap[reflect.TypeOf(t)] = append(typeMap[reflect.TypeOf(t)], testcase{testVal.testFunc, a, b})
+
+					typeMap[reflect.TypeOf(t).String()+stringlist[i]] = append(typeMap[reflect.TypeOf(t).String()+stringlist[i]], testcase{testVal.testFunc, a, b})
 				}
 			}
 		}
 
 		// Run the arithmetic test of the seperate types
-		for _, t := range typelist {
-			b.Run(dectest+"_"+prettyNames[reflect.TypeOf(t).String()], func(b *testing.B) {
+		for i, t := range typelist {
+			name := reflect.TypeOf(t).String() + stringlist[i]
+			fmt.Println(name)
+			// fmt.Println(t)
+			b.Run(dectest+"_"+prettyNames[name], func(b *testing.B) {
 				// Run tests 500 times
 				for j := 0; j < b.N; j++ {
-					for _, test := range typeMap[reflect.TypeOf(t)] {
+					for _, test := range typeMap[name] {
 						runtests(test.v1, test.v2, t, test.op)
 					}
 				}
@@ -92,6 +100,9 @@ func ParseDecimal(val1, val2 string, v interface{}) (a, b interface{}) {
 	case decimal.Decimal64:
 		a, _ = decimal.ParseDecimal64(val1)
 		b, _ = decimal.ParseDecimal64(val2)
+	case old.Decimal64:
+		a, _ = old.ParseDecimal64(val1)
+		b, _ = old.ParseDecimal64(val2)
 	case float64:
 		b, _ = strconv.ParseFloat(val2, 64)
 		a, _ = strconv.ParseFloat(val2, 64)
@@ -126,6 +137,8 @@ func runtests(a, b, c interface{}, op string) {
 	switch a.(type) {
 	case decimal.Decimal64:
 		execOp(a.(decimal.Decimal64), b.(decimal.Decimal64), c.(decimal.Decimal64), op)
+	case old.Decimal64:
+		execOpOld(a.(old.Decimal64), b.(old.Decimal64), c.(old.Decimal64), op)
 	case float64:
 		execOpFloat(a.(float64), b.(float64), c.(float64), op)
 	case shopspring.Decimal:
@@ -220,4 +233,18 @@ func execOp(a, b, c decimal.Decimal64, op string) decimal.Decimal64 {
 	default:
 	}
 	return decimal.Zero64
+}
+func execOpOld(a, b, c old.Decimal64, op string) old.Decimal64 {
+	switch op {
+	case "add":
+		return a.Add(b)
+	case "multiply":
+		return a.Mul(b)
+	case "abs":
+		return a.Abs()
+	case "divide":
+		return a.Quo(b)
+	default:
+	}
+	return old.Zero64
 }
