@@ -73,9 +73,6 @@ Repeated binary numbers:
 .html html/decFrac.html
 
 * Why?
-.html html/Sheet2.html
-
-* Why?
 .image img/BinDec.png _ 500
 
 * Solution - Decimal datatype
@@ -161,7 +158,7 @@ Base 10 counting system instead of base 2
 
 * A new decimal library in go
 - Follows 2008-r standard
-- Allows for future hardware support and optimisations
+- Allows for    future hardware support and optimisations
 
 * Arithmetic benchmarks - Add
 .image img/Add_dec.png 500 _
