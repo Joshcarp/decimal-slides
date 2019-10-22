@@ -1,0 +1,61 @@
+Go for Decimals
+Tags: decimal, floating point, fixed precision, IEEE 754R
+
+Joshua Carpeggiani
+Software Engineer, ANZ
+joshua.carpeggiani@anz.com
+
+* 
+.image img/Patriot_missile.jpg
+
+* Floating point numbers
+.play ../examples/TimeRounding.go /^func main/,/^}/
+
+:TODO redo this one
+* Floating point numbers
+    0.1 + 0.2 == 0.3 // Evaluates to false
+
+    4 * 0.2 == 0.8 // Evaluates to true
+
+    math.Round(0.49999999999999999) // rounds to 1
+
+* Floating point numbers
+- not even deterministic across architectures:
+    int main(void) {
+        long double a = 1.0; 
+        long double b = 3.0; 
+        double f = (a / b) - (1.0/3.0);
+        printf("%.50f\n", f);
+    }
+
+ 
+ 
+    x86 result: 0.33333333333333333334236835143737920361672877334058
+
+    arm result: 0.33333333333333331482961625624739099293947219848633
+* Why
+Not all numbering systems are created equal
+
+* Repeating numbers
+Repeated decimal numbers:
+.html html/110.html
+Repeated binary numbers:
+.html html/decFrac.html
+
+* Why?
+.image img/BinDec.png _ 500
+
+* Use Decimals
+
+* Why Not?
+Not all implementations of numbering systems are created equal
+
+*
+.image img/8087.jpg 200 _
+
+* Software vs Hardware
+.image img/Add_new.png 500 _
+
+* Decimal vs Floating point
+.image img/Add_dec.png 500 _
+
