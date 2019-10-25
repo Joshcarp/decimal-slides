@@ -73,27 +73,16 @@ Joshua Carpeggiani
 
 * Binary 
 .html html/binary_counting/1.html
-.html html/binary_counting/8.html
+.html html/binary_counting/11.html
 
 * Binary 
 .html html/binary_counting/1.html
-.html html/binary_counting/8.html
-.html html/binary_counting/9.html
+.html html/binary_counting/12.html
 
 * Binary 
 .html html/binary_counting/1.html
-.html html/binary_counting/8.html
-.html html/binary_counting/9.html
-.html html/binary_counting/10.html
+.html html/binary_counting/13.html
 
-
-
-
-
-
-* Binary 
- 
-.html html/binary_examples2.html
 
 * Why?
 .image img/BinDec.png _ 500
@@ -102,19 +91,28 @@ Joshua Carpeggiani
 .link http://www.github.com/anz-bank/decimal
 
 - Project Goal: Implement a 64 & 128 bit decimal floating point library
-- Conform as closely to ieee 754-2008 standard as practical
+- Conform as closely to IEEE 754-2008 standard as practical
 
 * Another Decimal library
 .play ../examples/decimal/decimalExample.go /^func main/,/^}/
 
-* Software vs Hardware
-.image img/Add_new.png 500 _
+
+* Telephone company
+.play ../examples/tele/dec/dec.go /^func main/,/^}/
+
+* Telephone company
+.play ../examples/tele/float/fl.go /^func main/,/^}/
 
 * Decimal vs Floating point
 .image img/Add_dec.png 500 _
 
-* Why Not?
-Not all implementations of numbering systems are created equal
+* Software vs Hardware
+.image img/Add_new.png 500 _
+
+* Not all implementations of numbering systems are created equal
+
+* 
+.image img/8087.jpg 200 _
 
 * Binary floating point Add
     func Mul(x, y float64) float64 {
@@ -186,11 +184,6 @@ Not all implementations of numbering systems are created equal
 
 * Decimal Arithmetic in Assembler
 .code ../examples/MulDec.asm  /^// PT 4/,
-
-* Requirements of a number library: Decimal floats
-1. Accuracy ✓
-2. Portability ✓
-3. Speed ✗ (not yet)
 
 * Looking forward
 - More optimisation
