@@ -8,6 +8,9 @@ joshua.carpeggiani@anz.com
 * 
 .image img/Patriot_missile.jpg
 
+* Go for decimals
+Joshua Carpeggiani
+
 * Floating point numbers
 .play ../examples/floatExample.go /^func main/,/^}/
 
@@ -24,15 +27,69 @@ joshua.carpeggiani@anz.com
 * Floating point numbers
 .play ../examples/TimeRounding.go /^func main/,/^}/
 
-
-
-
-* Why
-Not all numbering systems are created equal
+* Not all numbering systems are created equal
 
 * Binary 
- 
-.html html/binary_examples.html
+.html html/binary_counting/1.html
+.html html/binary_counting/2.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/2.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/2.html
+.html html/binary_counting/3.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/2.html
+.html html/binary_counting/3.html
+.html html/binary_counting/4.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/2.html
+.html html/binary_counting/3.html
+.html html/binary_counting/4.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/5.html
+
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/5.html
+.html html/binary_counting/6.html
+
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/5.html
+.html html/binary_counting/6.html
+.html html/binary_counting/7.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/8.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/8.html
+.html html/binary_counting/9.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/8.html
+.html html/binary_counting/9.html
+.html html/binary_counting/10.html
+
+
+
+
+
 
 * Binary 
  
