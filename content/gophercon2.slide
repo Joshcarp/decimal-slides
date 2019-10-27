@@ -12,23 +12,23 @@ joshua.carpeggiani@anz.com
 Joshua Carpeggiani
 
 * Floating point numbers
-.image code/first_example.png 400 _
+.image code/first_example.png 350 _
 
 
 * Floating point numbers
-.image code/first_example.png 400 _
+.image code/first_example.png 350 _
 
-.image code/first_ans.png _ 650 
+.image code/first_ans.png _ 500
 
-
-
-* Floating point numbers
-.image code/second.png 400 _
 
 
 * Floating point numbers
 .image code/second.png 400 _
-.image code/second_ans.png _ 650 
+
+
+* Floating point numbers
+.image code/second.png 400 _
+.image code/second_ans.png _ 500
 
 * Not all numbering systems are created equal
 
@@ -110,11 +110,11 @@ Joshua Carpeggiani
 
 
 * Another Decimal library
-.image code/decimal_example.png 350 _
+.image code/decimal_example.png 345 _
 
 
 * Another Decimal library
-.image code/decimal_example.png 350 _
+.image code/decimal_example.png 345 _
 
 .image code/decimal_ans.png 175 _
 
