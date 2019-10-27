@@ -45,7 +45,7 @@ func BenchmarkDecimal(b *testing.B) {
 	x := decimal.MustParseDecimal64("0.7")
 	y := decimal.MustParseDecimal64("1.05")
 
-	for n := 0; n < b.N; n++ {
+	for n := 0; n < 100000000; n++ {
 		Decimaltelephone(x, y)
 	}
 }

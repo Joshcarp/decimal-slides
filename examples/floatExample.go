@@ -6,10 +6,10 @@ import (
 
 func main() {
 	a := 0.1
-	b := 0.3
+	b := 0.2
+	c := 0.3
 
-	fmt.Printf("3*a == b; %v\n", 3*a == b)
-
-	fmt.Printf("%.20f %.20f\n", a, b)
-
+	fmt.Println(a+b == c)
 }
+
+// fmt.Printf("%.20f %.20f\n", a, b)

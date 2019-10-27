@@ -12,26 +12,25 @@ joshua.carpeggiani@anz.com
 Joshua Carpeggiani
 
 * Floating point numbers
-.play ../examples/floatExample.go /^func main/,/^}/
+.image code/first_example.png 400 _
 
-: TODO redo this one
-* Floating point numbers
-    a:= 0.1; b:= 0.2; c:= 0.3
-    fmt.Println(a + b == c) // Evaluates to false
-
-    d:= 0.6; e:= 0.2; f:= 0.8
-    fmt.Println(d + e == f) // Evaluates to true
-
-    math.Round(0.49999999999999999) // rounds to 1
 
 * Floating point numbers
-.play ../examples/TimeRounding.go /^func main/,/^}/
+.image code/first_example.png 400 _
+
+.image code/first_ans.png _ 650 
+
+
+
+* Floating point numbers
+.image code/second.png 400 _
+
+
+* Floating point numbers
+.image code/second.png 400 _
+.image code/second_ans.png _ 650 
 
 * Not all numbering systems are created equal
-
-* Binary 
-.html html/binary_counting/1.html
-.html html/binary_counting/2.html
 
 * Binary 
 .html html/binary_counting/1.html
@@ -71,6 +70,13 @@ Joshua Carpeggiani
 .html html/binary_counting/6.html
 .html html/binary_counting/7.html
 
+* Binary floating point numbers
+.html html/1e-2.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/11_1.html
+
 * Binary 
 .html html/binary_counting/1.html
 .html html/binary_counting/11.html
@@ -93,15 +99,39 @@ Joshua Carpeggiani
 - Project Goal: Implement a 64 & 128 bit decimal floating point library
 - Conform as closely to IEEE 754-2008 standard as practical
 
+
+* Scientific notation
+
+.html html/basic.html
+
+* Scientific notation
+
+.html html/basicAddition.html
+
+
 * Another Decimal library
-.play ../examples/decimal/decimalExample.go /^func main/,/^}/
+.image code/decimal_example.png 350 _
+
+
+* Another Decimal library
+.image code/decimal_example.png 350 _
+
+.image code/decimal_ans.png 175 _
 
 
 * Telephone company
-.play ../examples/tele/dec/dec.go /^func main/,/^}/
+.image code/telephone_dec.png 300 _
 
 * Telephone company
-.play ../examples/tele/float/fl.go /^func main/,/^}/
+.image code/telephone_dec.png 300 _
+.image code/telephone_dec_ans.png 150 _
+
+* Telephone company
+.image code/telephone_float.png 300 _
+
+* Telephone company
+.image code/telephone_float.png 300 _
+.image code/telephone_float_ans1.png 150 _
 
 * Decimal vs Floating point
 .image img/Multiply_new.png 500 _
