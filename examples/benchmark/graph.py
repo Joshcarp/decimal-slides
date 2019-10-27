@@ -14,10 +14,10 @@ def convertToCsv(filename):
     next(original)
     c.writerow(["TestName", "LibraryName", "iterations", "time"])
     line = original.read()
-    regex = r"(?:BenchmarkDecimal\/dd)(?P<TestName>\w*)(?:.decTest_)(?P<LibraryName>\w*)(?:(#\d*)*-\d\s*)(?P<iterations>\d*)(?:\s*)(?P<time>\d*)"
+    regex = r"(?:BenchmarkDecimal\/dd)(?P<TestName>\w*)(?:.decTest_)(?P<LibraryName>\w*)(?:(#\d*)*-\d\s*)(?P<iterations>\d*)(?:\s*)(?P<time>\d*.\d*)"
     matches = re.finditer(regex, line)
     for mat in matches:
-        c.writerow([mat.group("TestName"), mat.group("LibraryName"), mat.group("iterations"), int(mat.group("time"))/1000000])
+        c.writerow([mat.group("TestName"), mat.group("LibraryName"), mat.group("iterations"), float(mat.group("time"))])
     output.close()
     return
 

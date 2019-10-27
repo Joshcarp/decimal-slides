@@ -1,22 +1,40 @@
 package main
 
 import (
+	"math"
 	"testing"
 
-	"github.com/anz-bank/decimal"
+	"github.com/joshcarp/decimal"
 )
 
-// from fib_test.go
-func BenchmarkFloat(b *testing.B) {
-	x := 0.7
-	y := 1.05
+func BenchmarkSoftFloat(b *testing.B) {
+	x := math.Float64bits(0.7)
+	y := math.Float64bits(1.05)
 	// run the Fib function b.N times
 	for n := 0; n < b.N; n++ {
 		telephone(x, y)
 	}
 }
 
-func telephone(price, tax float64) float64 {
+// from fib_test.go
+
+func telephone(price, tax uint64) uint64 {
+	return fmul64(price, tax)
+
+}
+
+func BenchmarkFloat(b *testing.B) {
+	x := 0.7
+	y := 1.05
+	// run the Fib function b.N times
+	for n := 0; n < b.N; n++ {
+		telephoneFloat(x, y)
+	}
+}
+
+// from fib_test.go
+
+func telephoneFloat(price, tax float64) float64 {
 	return price * tax
 
 }

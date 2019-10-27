@@ -1,6 +1,8 @@
 # decimal-slides
 Presentation currently under development, no live version available
 
+GAE_ENV=standard go run .
+
 Slides and examples for gophercon
 - go present is used:
 - install https://github.com/golang/talks

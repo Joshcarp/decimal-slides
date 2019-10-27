@@ -81,7 +81,7 @@ Joshua Carpeggiani
 
 * Binary 
 .html html/binary_counting/1.html
-.html html/binary_counting/13.html
+.html html/binary_counting/14.html
 
 
 * Why?
@@ -104,20 +104,20 @@ Joshua Carpeggiani
 .play ../examples/tele/float/fl.go /^func main/,/^}/
 
 * Decimal vs Floating point
-.image img/Add_dec.png 500 _
+.image img/Multiply_new.png 500 _
 
 * Software vs Hardware
-.image img/Add_new.png 500 _
+.image img/Multiply_new2.png 500 _
 
 * Not all implementations of numbering systems are created equal
 
 * 
 .image img/8087.jpg 200 _
 
-* Binary floating point Add
+* Binary floating point Multiply
     func Mul(x, y float64) float64 {
-            return x * y
-        }
+        return x * y
+    }
 
 * Binary floating point Assembler
     func Mul(x, y float64) float64 {
@@ -187,7 +187,7 @@ Joshua Carpeggiani
 
 * Looking forward
 - More optimisation
-- Implement 128 and 64 bit
+- Implement 128 bit
 - Assembler optimisations
 
 * Another Decimal library

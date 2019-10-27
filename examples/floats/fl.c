@@ -2,13 +2,19 @@
 #include <stdio.h>
 
 
-void main()
+int main(void){
 
-{
+	int t = 60*60*100;
+	float time = 0.0;
 
-    float x = 33554430;
-	float y = 6;
-	// float y = 5.9604641222676946199499070644378662109375E-8;
-	printf("%f +%f = %f", x, y, x+y);
+	for (int seconds = 0; seconds < t; seconds++ ){
+
+		for (int tenths = 0; tenths < 10; tenths++ ){
+			time += 0.1;
+		}
+	}
+	float diff = t - time;
+
+	printf("Seconds taken in floating point: %f s\nReal time taken                : %d s\nTime difference                :  %f s", time, t, diff);
 
 }
