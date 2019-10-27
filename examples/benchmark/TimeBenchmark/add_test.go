@@ -16,7 +16,7 @@ func BenchmarkSoftFloat(b *testing.B) {
 }
 
 func telephone(price, tax uint64) uint64 {
-	return fmul64(price, tax)
+	return fadd64(price, tax)
 
 }
 
@@ -29,18 +29,18 @@ func BenchmarkFloat(b *testing.B) {
 }
 
 func telephoneFloat(price, tax float64) float64 {
-	return price * tax
+	return price + tax
 }
 
 func BenchmarkDecimal(b *testing.B) {
 	x := decimal.MustParseDecimal64("0.7")
 	y := decimal.MustParseDecimal64("1.05")
-	for n := 0; n < 100000000; n++ {
+	for n := 0; n < b.N; n++ {
 		Decimaltelephone(x, y)
 	}
 }
 
 func Decimaltelephone(price, tax decimal.Decimal64) decimal.Decimal64 {
-	return price.Mul(tax)
+	return price.Add(tax)
 
 }

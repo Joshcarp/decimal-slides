@@ -1,4 +1,3 @@
 TestName,LibraryName,iterations,time
-Multiply,float64,1000000000,0.225
-Multiply,softFloat64,91704010,12.1
-Multiply,decimal,11583289,99.8
+Add,float64,1000000000,0.225
+Add,decimal,21249037,78.4

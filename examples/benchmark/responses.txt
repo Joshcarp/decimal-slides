@@ -2,8 +2,7 @@ goos: linux
 goarch: amd64
 pkg: github.com/Joshcarp/decimal-slides/examples/benchmark
 
-BenchmarkDecimal/ddMultiply.decTest_float64-4               1000000000               0.225 ns/op
-BenchmarkDecimal/ddMultiply.decTest_softFloat64-4            91704010                12.1 ns/op
-BenchmarkDecimal/ddMultiply.decTest_decimal-4              21249037                54.7 ns/op
+BenchmarkDecimal/ddAdd.decTest_float64-4               1000000000               0.225 ns/op
+BenchmarkDecimal/ddAdd.decTest_softFloat64-4            91704010                11.7 ns/op
+BenchmarkDecimal/ddAdd.decTest_decimal-4              21249037                78.4 ns/op
 PASS
-
