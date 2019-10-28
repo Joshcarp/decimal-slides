@@ -48,6 +48,7 @@ func main() {
 		*basePath = pwd
 		*usePlayground = true
 		*contentPath = "./content/"
+		present.NotesEnabled = true
 	}
 
 	if *basePath == "" {
