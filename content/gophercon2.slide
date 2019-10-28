@@ -11,6 +11,14 @@ joshua.carpeggiani@anz.com
 * Go for decimals
 Joshua Carpeggiani
 
+
+: Melbourne university
+: Go project I started after meeting someone in a greengrocer
+: First peer reviewed project
+: University is really good at getting you to put a lot of effort into an assignment
+: only for you to get some mediocre feedback that you're never going to implement 
+: Go has been great to learn and use
+
 * Floating point numbers
 .image code/first_example.png 258 _
 
@@ -29,6 +37,8 @@ Joshua Carpeggiani
 * Floating point numbers
 .image code/second.png 400 _
 .image code/second_ans.png _ 500
+
+: 41 seconds going at 5 times the speed of sound is long enough to travel 71 kms 
 
 * Not all numbering systems are created equal
 
@@ -100,12 +110,24 @@ Joshua Carpeggiani
 
 * Why?
 .image img/BinDec.png _ 500
+: Lets take factors of 10; 5 and 2.
+: Because they have symbols, their inverses also have exact representations too 
+
+: This means that all binary numbers can be represented in a decimal system, not vice versa
+
 
 * Another Decimal library
 .link http://www.github.com/anz-bank/decimal
 
 - Project Goal: Implement a 64 & 128 bit decimal floating point library
 - Conform as closely to IEEE 754-2008 standard as practical
+
+: Other projects exist; although they use different encodings
+: This one was chosen for a couple of reasons
+: 1. Speed; Fitting in everything in a 64 and 128 bit uint means that no dealing with slices like other types
+: 2. Portability: Using a standard encoding allows for portability across programs; if you need to store a piece of data, but don't want to store it as an intermediate string there's no need to. 
+: once all 
+: 2. Extendibility; Using a fixed precision allows for 
 
 
 * Scientific notation
@@ -114,7 +136,13 @@ Joshua Carpeggiani
 
 * Scientific notation
 
+.html html/basic2.html
+
+
+* Scientific notation
+
 .html html/basicAddition.html
+
 
 
 * Another Decimal library
@@ -134,6 +162,8 @@ Joshua Carpeggiani
 
 .image code/decimal_time_ans.png 175 _
 
+* The End
+
 * Decimal decoding 
 .html html/decimal_decoding/dec1.html
 
@@ -148,6 +178,12 @@ Joshua Carpeggiani
 
 * Decimal decoding 
 .html html/decimal_decoding/dec5.html
+
+* Decimal decoding 
+.html html/decimal_decoding/dec51.html
+
+* Decimal decoding 
+.html html/decimal_decoding/dec52.html
 
 * Decimal decoding 
 .html html/decimal_decoding/dec6.html
