@@ -6,7 +6,7 @@ Software Engineer, ANZ
 joshua.carpeggiani@anz.com
 
 * 
-.image img/Patriot_missile.jpg
+.image img/missile.png
 
 * Go for decimals
 Joshua Carpeggiani
@@ -178,7 +178,9 @@ Joshua Carpeggiani
 .image code/Add.png 125 _
 .image code/Add.asm.png 375 _
 
-
+* Binary floating point Assembler
+.image code/Add.png 125 _
+.image code/Add2.asm.png 375 _
 
 * Decimal Arithmetic in Go
 .image code/DecAdd.png _ 923
