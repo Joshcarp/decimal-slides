@@ -12,13 +12,13 @@ joshua.carpeggiani@anz.com
 Joshua Carpeggiani
 
 * Floating point numbers
-.image code/first_example.png 350 _
+.image code/first_example.png 258 _
 
 
 * Floating point numbers
-.image code/first_example.png 350 _
+.image code/first_example.png 258 _
 
-.image code/first_ans.png _ 500
+.image code/first_ans1.png _ 300
 
 
 
@@ -34,15 +34,22 @@ Joshua Carpeggiani
 
 * Binary 
 .html html/binary_counting/1.html
+.html html/binary_counting/0.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/0.html
 .html html/binary_counting/2.html
 
 * Binary 
 .html html/binary_counting/1.html
+.html html/binary_counting/0.html
 .html html/binary_counting/2.html
 .html html/binary_counting/3.html
 
 * Binary 
 .html html/binary_counting/1.html
+.html html/binary_counting/0.html
 .html html/binary_counting/2.html
 .html html/binary_counting/3.html
 .html html/binary_counting/4.html
@@ -50,22 +57,23 @@ Joshua Carpeggiani
 * Binary 
 .html html/binary_counting/1.html
 .html html/binary_counting/2.html
-.html html/binary_counting/3.html
-.html html/binary_counting/4.html
 
 * Binary 
 .html html/binary_counting/1.html
+.html html/binary_counting/2.html
 .html html/binary_counting/5.html
 
 
 * Binary 
 .html html/binary_counting/1.html
+.html html/binary_counting/2.html
 .html html/binary_counting/5.html
 .html html/binary_counting/6.html
 
 
 * Binary 
 .html html/binary_counting/1.html
+.html html/binary_counting/2.html
 .html html/binary_counting/5.html
 .html html/binary_counting/6.html
 .html html/binary_counting/7.html
@@ -120,48 +128,60 @@ Joshua Carpeggiani
 
 * Another Decimal library
 .image code/decimalTime.png 345 _
+
 * Another Decimal library
 .image code/decimalTime.png 345 _
 
 .image code/decimal_time_ans.png 175 _
 
-* Telephone company
-.image code/telephone_dec.png 300 _
+* Decimal decoding 
+.html html/decimal_decoding/dec1.html
 
-* Telephone company
-.image code/telephone_dec.png 300 _
-.image code/telephone_dec_ans.png 150 _
+* Decimal decoding 
+.html html/decimal_decoding/dec2.html
 
-* Telephone company
-.image code/telephone_float.png 300 _
+* Decimal decoding 
+.html html/decimal_decoding/dec3.html
 
-* Telephone company
-.image code/telephone_float.png 300 _
-.image code/telephone_float_ans1.png 150 _
+* Decimal decoding 
+.html html/decimal_decoding/dec4.html
+
+* Decimal decoding 
+.html html/decimal_decoding/dec5.html
+
+* Decimal decoding 
+.html html/decimal_decoding/dec6.html
+
+* Decimal decoding 
+.html html/decimal_decoding/bin1.html
+
+* Decimal decoding 
+.html html/decimal_decoding/bin2.html
+
+* Decimal decoding 
+.html html/decimal_decoding/bin3.html
 
 * Decimal vs Floating point
-.image img/Multiply_new.png 500 _
+.image img/Add_new2.png 500 _
 
 * Software vs Hardware
-.image img/Multiply_new2.png 500 _
+.image img/Add_new.png 500 _
 
 * Not all implementations of numbering systems are created equal
 
-* 
-.image img/8087.jpg 200 _
 
-* Binary floating point Multiply
-    func Mul(x, y float64) float64 {
-        return x * y
+* Binary floating point Add
+    func Add(x, y float64) float64 {
+        return x + y
     }
 
 * Binary floating point Assembler
-    func Mul(x, y float64) float64 {
-        return x * y
+    func Add(x, y float64) float64 {
+        return x + y
     }
  
-    "".Mul STEXT nosplit size=23 args=0x18 locals=0x0
-    TEXT	"".Mul(SB), NOSPLIT|ABIInternal, $0-24
+    "".Add STEXT nosplit size=23 args=0x18 locals=0x0
+    TEXT	"".Add(SB), NOSPLIT|ABIInternal, $0-24
     FUNCDATA	$0, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
     FUNCDATA	$1, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
     FUNCDATA	$2, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
@@ -169,13 +189,13 @@ Joshua Carpeggiani
     PCDATA	$1, $0
     MOVSD	"".x+8(SP), X0
     MOVSD	"".y+16(SP), X1
-    MULSD	X1, X0
+    ADDSD	X1, X0
     MOVSD	X0, "".~r2+24(SP)
     RET
 
 * Decimal Arithmetic in Go
     // Mul computes d * e
-    func (ctx Context64) Mul(d, e Decimal64) Decimal64 {
+    func (ctx Context64) Add(d, e Decimal64) Decimal64 {
         dp := d.getParts()
         ep := e.getParts()
         if dec := propagateNan(&dp, &ep); dec != nil {
@@ -210,16 +230,30 @@ Joshua Carpeggiani
     }
 
 * Decimal Arithmetic in Assembler
-.code ../examples/MulDec.asm
+.code ../examples/AddDec.asm
 
 * Decimal Arithmetic in Assembler
-.code ../examples/MulDec.asm  /^// PT 2/,/// PT 3/
+.code ../examples/AddDec.asm  /^// PT 2/,/// PT 3/
 
 * Decimal Arithmetic in Assembler
-.code ../examples/MulDec.asm  /^// PT 3/,/// PT 4/
+.code ../examples/AddDec.asm  /^// PT 3/,/// PT 4/
 
 * Decimal Arithmetic in Assembler
-.code ../examples/MulDec.asm  /^// PT 4/,
+.code ../examples/AddDec.asm  /^// PT 4/,
+
+* A better solution
+.image code/intTime.go.png 345 _
+
+* A better solution
+.image code/intTime.go.png 345 _
+.image code/decimal_time_ans.png 175 _
+
+* Conclusion
+- Use floats if you really need performance
+- Use ints as your smallest unit if you need precision and performance
+- Use decimals for everything else
+- Come contribute
+github.com/anz-bank/decimal
 
 * Looking forward
 - More optimisation

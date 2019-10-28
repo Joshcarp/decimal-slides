@@ -42,5 +42,16 @@ func BenchmarkDecimal(b *testing.B) {
 
 func Decimaltelephone(price, tax decimal.Decimal64) decimal.Decimal64 {
 	return price.Add(tax)
+}
 
+func BenchmarkInt(b *testing.B) {
+	x := 70
+	y := 105
+	for n := 0; n < b.N; n++ {
+		telephoneInt(x, y)
+	}
+}
+
+func telephoneInt(a, b int) int {
+	return a + b
 }

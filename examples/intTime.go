@@ -14,5 +14,4 @@ func main() {
 	}
 	fmt.Printf("Seconds taken in decimal       : %d s\n", time/10)
 	fmt.Printf("Real time taken                : %d s\n", timeLimit)
-
 }

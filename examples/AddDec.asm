@@ -105,6 +105,7 @@ PCDATA	$2, $0
 MOVQ	AX, (SP)
 CALL	"".(*DecParts).removeZeros(SB)
 PCDATA	$2, $1
+// PT 4
 LEAQ	"".dp+128(SP), AX
 PCDATA	$2, $0
 MOVQ	AX, (SP)
