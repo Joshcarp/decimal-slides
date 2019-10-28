@@ -152,13 +152,13 @@ Joshua Carpeggiani
 * Decimal decoding 
 .html html/decimal_decoding/dec6.html
 
-* Decimal decoding 
+* Binary decoding 
 .html html/decimal_decoding/bin1.html
 
-* Decimal decoding 
+* Binary  decoding 
 .html html/decimal_decoding/bin2.html
 
-* Decimal decoding 
+* Binary decoding 
 .html html/decimal_decoding/bin3.html
 
 
@@ -168,8 +168,9 @@ Joshua Carpeggiani
 * Software vs Hardware
 .image img/Add_new.png 500 _
 
-* Not all implementations of numbering systems are created equal
 
+* 
+.image img/not_all_implementations.jpg 600 _
 
 * Binary floating point Add
 .image code/Add.png 125 _
