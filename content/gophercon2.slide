@@ -18,6 +18,8 @@ Joshua Carpeggiani
 : University is really good at getting you to put a lot of effort into an assignment
 : only for you to get some mediocre feedback that you're never going to implement 
 : Go has been great to learn and use
+: Today I want to talk about floating point numbers; their pitfalls and strengths
+: Decimals; Possibly a better alternative; the implications of using decimals and a bit about the project I've been part of
 
 * Floating point numbers
 .image code/first_example.png 258 _
@@ -38,7 +40,7 @@ Joshua Carpeggiani
 .image code/second.png 400 _
 .image code/second_ans.png _ 500
 
-: 41 seconds going at 5 times the speed of sound is long enough to travel 71 kms 
+: 41 seconds going at 5 times the speed of sound is long enough to travel 71 kms
 
 * Not all numbering systems are created equal
 
@@ -126,7 +128,7 @@ Joshua Carpeggiani
 : This one was chosen for a couple of reasons
 : 1. Speed; Fitting in everything in a 64 and 128 bit uint means that no dealing with slices like other types
 : 2. Portability: Using a standard encoding allows for portability across programs; if you need to store a piece of data, but don't want to store it as an intermediate string there's no need to. 
-: once all 
+: once all; language agnostic
 : 2. Extendibility; Using a fixed precision allows for 
 
 
@@ -147,6 +149,14 @@ Joshua Carpeggiani
 * Scientific notation
 
 .html html/basicAddition.html
+
+* Scientific notation
+
+.html html/basicAddition1.html
+
+* Scientific notation
+
+.html html/basicAddition2.html
 
 
 
@@ -181,6 +191,9 @@ Joshua Carpeggiani
 - Use decimals for everything?
 - Why doesn't everything use this?
 - Are decimals even that efficient?
+
+: IBM research; out of a survey in 2007 of enterprise databases;
+: 55% of numeric data was decimal
 
 
 
@@ -224,16 +237,20 @@ Joshua Carpeggiani
 * Software vs Hardware
 .image img/Add_new.png 500 _
 
-
 * 
 .image img/not_all_implementations.jpg 600 _
+: TAKE A BREAK
 
 * Binary floating point Add
 .image code/Add.png 125 _
 
+: 250 times slower than floating point addition
+
 * Binary floating point Assembler
 .image code/Add.png 125 _
 .image code/Add.asm.png 375 _
+
+: 7 times slower than software floating point addition
 
 * Binary floating point Assembler
 .image code/Add.png 125 _
@@ -254,6 +271,14 @@ Joshua Carpeggiani
 * Decimal Arithmetic in Go
 .image code/Dec4.asm.png _ 923
 
+: It's CRAZY to think that 55% of databases use this type; consider the inefficency.
+: IBM research Using this method takes 50-90% more processing resources instead of using a builtin type
+
+* Is there a better way?
+: Relate back to the missile defence system
+: Maybe if we rething the question a little bit:
+: Going back to our clock example, lets try to use ints
+
 * A better solution
 .image code/intTime.go.png 345 _
 
@@ -262,18 +287,20 @@ Joshua Carpeggiani
 .image code/intTime_ans.png 175 _
 
 * Conclusion
-- Use floats if you really need performance
+- Use floats if you really need performance and not precision
 - Use ints as your smallest unit if you need precision and performance
 - Use decimals for everything else
 - Come contribute
 github.com/anz-bank/decimal
+
+: I've had a blast in this project;
+: Before I didn't know very much about Software engineering or how open source projects work
+: It'd be awesome for people to join 
 
 * Looking forward
 - More optimisation
 - Implement 128 bit
 - Assembler optimisations
 
-* Another Decimal library
-.link http://www.github.com/anz-bank/decimal
 
 
