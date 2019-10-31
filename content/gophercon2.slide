@@ -197,10 +197,10 @@ joshua.carpeggiani@anz.com
 * Applause
 
 * 
-.image img/gopher.png 100 _
+.image img/gopher.gif 500 _
 
 * 
-.image img/gopher.gif 500 _
+.image img/gophers.png 500 _
 
 * The End?
 
@@ -318,6 +318,7 @@ joshua.carpeggiani@anz.com
 - Use decimals for everything else
 - Come contribute
 github.com/anz-bank/decimal
+: eirclargergren/decimal
 
 * Looking forward
 - More optimisation
@@ -335,9 +336,10 @@ github.com/anz-bank/decimal
 .image img/proposal.png 500 _
 : There has been an issue open on golang go's github, and it never got closed
 
-
 : But maybe not; maybe decimals just aren't efficent enough due to their lacking hardware support in order to grant 
 : them into the Go Core
+
+
 
 
 
