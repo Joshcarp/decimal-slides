@@ -16,9 +16,6 @@ joshua.carpeggiani@anz.com
 
 : Less than 24 hours later a software update was deployed to fix the bug that caused the issue. 
 
-* Go for decimals
-Joshua Carpeggiani
-
 : Melbourne university
 : Part time Software engineer
 : Summer internship
@@ -41,8 +38,7 @@ Joshua Carpeggiani
 : Decimals; Possibly a better alternative; the implications of using decimals and a bit about the project I've been part of
 
 
-* Go for decimals
-Joshua Carpeggiani
+* 
 .image img/tour.png 500 _
 
 
@@ -204,6 +200,12 @@ Joshua Carpeggiani
 
 * Applause
 
+* 
+.image img/gopher.png 100 _
+
+* 
+.image img/gopher.gif 500 _
+
 * The End?
 
 
@@ -333,7 +335,8 @@ github.com/anz-bank/decimal
 .image img/proposal.png 500 _
 : This would give go a more intuative numbering system in go, despite its downfalls
 : Or maybe not; maybe decimals just aren't efficent enough and a high enough priority in order to grant 
-: Go Core support, although it would definitely allow for easier adoption of such programming 
+: Go Core support,
+: although it would definitely allow for easier adoption of such programming 
 
 : Or even being able to overload the operators in go could even be good enough
 
