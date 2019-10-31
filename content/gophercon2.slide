@@ -5,8 +5,6 @@ Joshua Carpeggiani
 Software Engineer, ANZ
 joshua.carpeggiani@anz.com
 
-* 
-.image img/missile.png
 : Let me set the scene, it is February 1991, a missile has been launched with a military base in its sights. An anti air defence system kicks into gear ready to blow the enemy ballistic out of the sky, saving those living in the base.
 : The system turns on scans the sky for an incoming missile, looking at the part of the sky that sent it the trigger to activate.
 : It looks and looks, and looks, and looks. 
@@ -20,11 +18,6 @@ joshua.carpeggiani@anz.com
 
 * Go for decimals
 Joshua Carpeggiani
-
-* Go for decimals
-Joshua Carpeggiani
-.image img/tour.png 500 _
-
 
 : Melbourne university
 : Part time Software engineer
@@ -46,6 +39,12 @@ Joshua Carpeggiani
 
 : Today I want to talk about floating point numbers; their pitfalls and strengths
 : Decimals; Possibly a better alternative; the implications of using decimals and a bit about the project I've been part of
+
+
+* Go for decimals
+Joshua Carpeggiani
+.image img/tour.png 500 _
+
 
 * Floating point numbers
 .image code/first_example.png 258 _
@@ -333,7 +332,11 @@ github.com/anz-bank/decimal
 * Go core?
 .image img/proposal.png 500 _
 : This would give go a more intuative numbering system in go, despite its downfalls
+: Or maybe not; maybe decimals just aren't efficent enough and a high enough priority in order to grant 
+: Go Core support, although it would definitely allow for easier adoption of such programming 
+
 : Or even being able to overload the operators in go could even be good enough
+
 
 
 
