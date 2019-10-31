@@ -28,18 +28,14 @@ joshua.carpeggiani@anz.com
 : and I’d been stuck for a couple of hours at this point and was checking my emails to keep my sanity. 
 : After this I frantically started going through "A tour of go" whilst on my journey
 
-: Got to the gold coast in the end, working on my "proper" software engineering project
-: Quite different to university; obviously
-: University is really good at getting you to put a lot of effort into an assignment
-: only for you to get some mediocre feedback that you're never going to implement 
-: anyway 
-
-: Today I want to talk about floating point numbers; their pitfalls and strengths
-: Decimals; Possibly a better alternative; the implications of using decimals and a bit about the project I've been part of
-
 
 * 
 .image img/tour.png 500 _
+
+: Got to the gold coast in the end, working on my "proper" software engineering project
+
+: Today I want to talk about floating point numbers; their pitfalls and strengths
+: Decimals; Possibly a better alternative; the implications of using decimals and a bit about the project I've been part of
 
 
 * Floating point numbers
@@ -314,6 +310,7 @@ joshua.carpeggiani@anz.com
 * A better solution
 .image code/intTime.go.png 345 _
 .image code/intTime_ans.png 175 _
+: This doesn't work for everything; calculating anything fractional is now a problem if your base unit changes and can be quite messy
 
 * Conclusion
 - Use floats if you really need performance and not precision
@@ -328,17 +325,19 @@ github.com/anz-bank/decimal
 - Assembler optimisations
 
 : I know every man and his dog might want to put something in the go core, 
-: and even though I personally feel like the language that we use should be easy and intuative
-: And apparently it's not such a crazy idea that there has actually been a proposal that hasen't been closed yet
+: And over the years there have been a number of proposals to get a decimal type in the go core
+: Reasons stem from intuativness; since we think in base 10 shouldn't go have a type which supports that thinking 
+: especially in a programming language which boasts "rediness out of the box"
+: other arguments focus on other number types;
+: Go already has a complex type; a decimal data type would most definitely be used more than that
 
-* Go core?
+*
 .image img/proposal.png 500 _
-: This would give go a more intuative numbering system in go, despite its downfalls
-: Or maybe not; maybe decimals just aren't efficent enough and a high enough priority in order to grant 
-: Go Core support,
-: although it would definitely allow for easier adoption of such programming 
+: There has been an issue open on golang go's github, and it never got closed
 
-: Or even being able to overload the operators in go could even be good enough
+
+: But maybe not; maybe decimals just aren't efficent enough due to their lacking hardware support in order to grant 
+: them into the Go Core
 
 
 
