@@ -321,6 +321,7 @@ joshua.carpeggiani@anz.com
 - Use decimals for everything else
 - Come contribute
 github.com/anz-bank/decimal
+
 : eirclargergren/decimal
 
 * Looking forward
@@ -335,7 +336,7 @@ github.com/anz-bank/decimal
 : other arguments focus on other number types;
 : Go already has a complex type; a decimal data type would most definitely be used more than that
 
-*
+* Core
 .image img/proposal.png 500 _
 : There has been an issue open on golang go's github, and it never got closed
 
