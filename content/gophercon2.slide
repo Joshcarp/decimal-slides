@@ -7,17 +7,39 @@ joshua.carpeggiani@anz.com
 
 * 
 .image img/missile.png
+: Let me set the scene, it is February 1991, a missile has been launched with a military base in its sights. An anti air defence system kicks into gear ready to blow the enemy ballistic out of the sky, saving those living in the base.
+: The system turns on scans the sky for an incoming missile, looking at the part of the sky that sent it the trigger to activate.
+: It looks and looks, and looks, and looks. 
+: A problem occurs; a floating point rounding error caused the internal clock to be off by a third of a second. 
+: Under some circumstances, such inaccuracy might be unnoticeable but when attempting to scan the sky for an object moving five times the speed of sound the result was less than desirable.
+
+: The system can’t find anything. It turns off. 
+: The missile hits the base moments later. 
+
+: Less than 24 hours later a software update was deployed to fix the bug that caused the issue. 
 
 * Go for decimals
 Joshua Carpeggiani
 
 
 : Melbourne university
-: Go project I started after meeting someone in a greengrocer
-: First peer reviewed project
+: Part time Software engineer
+: Summer internship
+: Weird story to how I got going
+: i met my now colleague in a fuit and veg shop and we started talking about software engineering
+: She mentioned that some jolly old fellow named marcelo was trying to get an summer internship program going on decimals and go
+: A project he started on . 
+: A couple of weeks go by, some emails have been exchanged and the project finally gets the go-ahead.
+: I remember I was on the side of the road trying to hitchhike from melbourne to the gold coast 
+: and I’d been stuck for a couple of hours at this point and was checking my emails to keep my sanity. 
+: After this I frantically started going through "A tour of go" whilst on my journey
+
+: Got to the gold coast in the end, working on my "proper" software engineering project
+: Quite different to university; obviously
 : University is really good at getting you to put a lot of effort into an assignment
 : only for you to get some mediocre feedback that you're never going to implement 
-: Go has been great to learn and use
+: anyway 
+
 : Today I want to talk about floating point numbers; their pitfalls and strengths
 : Decimals; Possibly a better alternative; the implications of using decimals and a bit about the project I've been part of
 
