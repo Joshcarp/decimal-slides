@@ -56,11 +56,11 @@
     -o-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-
+/* 
     border-radius: 10px;
     -o-border-radius: 10px;
     -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
+    -webkit-border-radius: 10px; */
 
     background-color: white;
 
