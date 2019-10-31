@@ -21,6 +21,10 @@ joshua.carpeggiani@anz.com
 * Go for decimals
 Joshua Carpeggiani
 
+* Go for decimals
+Joshua Carpeggiani
+.image img/tour.png 500 _
+
 
 : Melbourne university
 : Part time Software engineer
@@ -317,14 +321,20 @@ Joshua Carpeggiani
 - Come contribute
 github.com/anz-bank/decimal
 
-: I've had a blast in this project;
-: Before I didn't know very much about Software engineering or how open source projects work
-: It'd be awesome for people to join 
-
 * Looking forward
 - More optimisation
 - Implement 128 bit
 - Assembler optimisations
+
+: I know every man and his dog might want to put something in the go core, 
+: and even though I personally feel like the language that we use should be easy and intuative
+: And apparently it's not such a crazy idea that there has actually been a proposal that hasen't been closed yet
+
+* Go core?
+.image img/proposal.png 500 _
+: This would give go a more intuative numbering system in go, despite its downfalls
+: Or even being able to overload the operators in go could even be good enough
+
 
 
 
