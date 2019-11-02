@@ -175,14 +175,14 @@ padding: 1em 1em 1.5em 1em;
 
 
 
-@media only screen, print and (max-width: 800px) {
+@media only screen, print {
     .standard_number .standard_digit {
         font-size: 1.7em;
     }
  }
 
 
- @media only screen, print and (max-width: 700px) {
+ @media only screen, print {
     .standard_number .standard_digit {
         font-size: 1.5em;
     }
@@ -194,7 +194,7 @@ padding: 1em 1em 1.5em 1em;
  }
 
 
- @media only screen, print and (max-width: 550px) {
+ @media only screen, print{
     .standard_number .standard_digit {
         font-size: 1.2em;
     }
@@ -206,7 +206,7 @@ padding: 1em 1em 1.5em 1em;
  }
 
 
- @media only screen, print and (max-width: 420px) {
+ @media only screen, print  {
 
     .float_bit_number, .float_int_number {
         font-size:1.15em;
@@ -234,7 +234,7 @@ padding: 1em 1em 1.5em 1em;
     }
  }
 
- @media only screen, print and (max-width: 360px) {
+ @media only screen, print{
 
     .big_number .standard_digit {
         font-size: 2.8em;

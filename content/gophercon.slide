@@ -1,241 +1,351 @@
-Go for Decimal
+Go for Decimals
 Tags: decimal, floating point, fixed precision, IEEE 754R
 
 Joshua Carpeggiani
 Software Engineer, ANZ
 joshua.carpeggiani@anz.com
-: Software engineer working with go for about a year; decimal project, go-course
+
+: Let me set the scene, it is February 1991, a missile has been launched with a military base in its sights. An anti air defence system kicks into gear ready to blow the enemy ballistic out of the sky, saving those living in the base.
+: The system turns on scans the sky for an incoming missile, looking at the part of the sky that sent it the trigger to activate.
+: It looks and looks, and looks, and looks. 
+: A problem occurs; a floating point rounding error caused the internal clock to be off by a third of a second. 
+: Under some circumstances, such inaccuracy might be unnoticeable but when attempting to scan the sky for an object moving five times the speed of sound the result was less than desirable.
+
+: The system can’t find anything. It turns off. 
+: The missile hits the base moments later. 
+
+: Less than 24 hours later a software update was deployed to fix the bug that caused the issue. 
+
+: Melbourne university
+: Part time Software engineer
+: Summer internship
+: Weird story to how I got going
+: i met my now colleague in a fuit and veg shop and we started talking about software engineering
+: She mentioned that some jolly old fellow named marcelo was trying to get an summer internship program going on decimals and go
+: A project he started on . 
+: A couple of weeks go by, some emails have been exchanged and the project finally gets the go-ahead.
+: I remember I was on the side of the road trying to hitchhike from melbourne to the gold coast 
+: and I’d been stuck for a couple of hours at this point and was checking my emails to keep my sanity. 
+: After this I frantically started going through "A tour of go" whilst on my journey
+
 
 * 
-"If I had a dime for every time I've seen someone use FLOAT to store currency, I'd have $999.997634." - Bill Karwin
+.image img/tour.png 500 _
+
+: Got to the gold coast in the end, working on my "proper" software engineering project
+
+: Today I want to talk about floating point numbers; their pitfalls and strengths
+: Decimals; Possibly a better alternative; the implications of using decimals and a bit about the project I've been part of
+
 
 * Floating point numbers
-.play ../examples/floatExample.go /^func main/,/^}/
+.image code/first_example.png 258 _
+
 
 * Floating point numbers
-.play ../examples/TimeRounding.go /^func main/,/^}/
+.image code/first_example.png 258 _
+
+.image code/first_ans1.png _ 300
+
+
 
 * Floating point numbers
-.play ../examples/floats/floatRound.go /^func main/,/^}/
+.image code/second.png 400 _
+
 
 * Floating point numbers
-- not even deterministic across architectures:
-    int main(void) {
-        long double a = 1.0; 
-        long double b = 3.0; 
-        double f = (a / b) - (1.0/3.0);
-        printf("%.50f\n", f);
-    }
+.image code/second.png 400 _
+.image code/second_ans.png _ 500
 
- 
- 
-    x86 result: 0.33333333333333333334236835143737920361672877334058
+: 41 seconds going at 5 times the speed of sound is long enough to travel 71 kms
 
-    arm result: 0.33333333333333331482961625624739099293947219848633
+* Not all numbering systems are created equal
 
-* Floating point numbers
-.image img/oddVsEven.png 550 _
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/0.html
 
-* Floating point numbers
-.play ../examples/floats/floatAdd.go /^func main/,/^}/
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/0.html
+.html html/binary_counting/2.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/0.html
+.html html/binary_counting/2.html
+.html html/binary_counting/3.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/0.html
+.html html/binary_counting/2.html
+.html html/binary_counting/3.html
+.html html/binary_counting/4.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/2.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/2.html
+.html html/binary_counting/5.html
+
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/2.html
+.html html/binary_counting/5.html
+.html html/binary_counting/6.html
+
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/2.html
+.html html/binary_counting/5.html
+.html html/binary_counting/6.html
+.html html/binary_counting/7.html
+
+* Binary floating point numbers
+.html html/1e-2.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/11_1.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/11.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/12.html
+
+* Binary 
+.html html/binary_counting/1.html
+.html html/binary_counting/14.html
+
+
+* Why?
+.image img/BinDec.png _ 500
+: Lets take factors of 10; 5 and 2.
+: Because they have symbols, their inverses also have exact representations too 
+
+: This means that all binary numbers can be represented in a decimal system, not vice versa
+
+
+* Another Decimal library
+.link http://www.github.com/anz-bank/decimal
+
+- Project Goal: Implement a 64 & 128 bit decimal floating point library
+- Conform as closely to IEEE 754-2008 standard as practical
+
+: Other projects exist; although they use different encodings
+: This one was chosen for a couple of reasons
+: 1. Speed; Fitting in everything in a 64 and 128 bit uint means that no dealing with slices like other types
+: 2. Portability: Using a standard encoding allows for portability across programs; if you need to store a piece of data, but don't want to store it as an intermediate string there's no need to. 
+: once all; language agnostic
+: 2. Extendibility; Using a fixed precision allows for 
+
 
 * Scientific notation
 
 .html html/basic.html
-: Scientific notation is at the base of what a floating point number is;
-: We can take out number, pick-up the decimal point and move it to wherever we want
-: Then when we're representing the number, we multiply it by 10 to the power
-: of the amount of decimal shifts we moved our point
 
-: Ths allows us to store really really large numbers and also really really small numbers
-: without having to fill up our screen with zeros
+* Scientific notation
+
+.html html/basic2.html
 
 
-* Binary floating point numbers
-.html html/basicBinary.html
+* Scientific notation
 
-: The same can be done with binary numbers
-: note instead of a 10 we now have a 2 as the base, because we're counting in base 2
+.html html/basic3.html
 
 
-* Floating point numbers
-.html html/basicBinary.html
+* Scientific notation
 
-.html html/floatingpointbits.html
-: And now arises the question of how to represent this in a bunch of bits?
-: We can divide up just a standard 32 bit integer into the sign exponent and significand 
-: but there's a problem: we can't represent decimal fractions 
+.html html/basicAddition.html
 
-* The problem with floating point numbers
-Repeated decimal numbers:
-.html html/110.html
-Repeated binary numbers:
-.html html/decFrac.html
+* Scientific notation
 
-* Why?
-.image img/BinDec.png _ 500
+.html html/basicAddition1.html
 
-* Solution - Decimal datatype
+* Scientific notation
 
-.html html/110decimal.html
-
-* Bit representation of IEEE 754-2008 decimal floating point
-.html html/floatingpointbits.html
-.html html/decimalpointbits.html
-
-* Solution - Decimal datatype
-.play ../examples/decimal/decimalExample.go /^func main/,/^}/
-Base 10 counting system instead of base 2
-
-* Usage of decimal libraries
-.image img/decimalSurvey.png 600 _
-
-* Requirements of a number library: Binary floats
-1. Accuracy ✘
-2. Portability ?
-3. Speed ?
-
-* Portability and Speed
-
-* 1980
-.image img/8087.jpg 200 _
-- Intel 8087 released
-- FPU; "Floating Point Unit"
-- Used to speed up calculations via hardware implementations
-: C released 8 years previously and didn;t have a builtin float type
-
-* 1980
-.image img/8087_inside.jpg 600 _
-
-* 1980
-.image img/8087_schematic.png 500 _
+.html html/basicAddition2.html
 
 
-* 1985
-- IEEE 754 standard:
-- Standardised floating point implementations across platforms
-- Implemented into almost every programming language and has hardware support on majorty of cpu architectures
-* IEEE 754 standard:
-- 5 Rounding attributes
-- +- inf
-- -0 == +0
-- 1/0 == +inf
-- 0/0 == NaN
 
-* Benchmarking
+* Another Decimal library
+.image code/decimal_example.png 345 _
+
+
+* Another Decimal library
+.image code/decimal_example.png 345 _
+
+.image code/decimal_ans.png 175 _
+
+* Another Decimal library
+.image code/decimalTime.png 345 _
+
+* Another Decimal library
+.image code/decimalTime.png 345 _
+
+.image code/decimal_time_ans.png 175 _
+
+* Applause
+
+* Applause
+
+
+* 
+.image img/gopher.gif 500 _
+
+* 
+.image img/gophers.png 500 _
+
+* The End?
+
+
+* The End?
+- Use decimals for everything?
+
+* The End?
+- Use decimals for everything?
+- Why doesn't everything use this?
+
+* The End?
+- Use decimals for everything?
+- Why doesn't everything use this?
+- Are decimals even that efficient?
+
+: IBM research; out of a survey in 2007 of enterprise databases;
+: 55% of numeric data was decimal
+
+
+
+* Decimal decoding 
+.html html/decimal_decoding/dec1.html
+
+* Decimal decoding 
+.html html/decimal_decoding/dec2.html
+
+* Decimal decoding 
+.html html/decimal_decoding/dec3.html
+
+* Decimal decoding 
+.html html/decimal_decoding/dec4.html
+
+* Decimal decoding 
+.html html/decimal_decoding/dec5.html
+
+* Decimal decoding 
+.html html/decimal_decoding/dec51.html
+
+* Decimal decoding 
+.html html/decimal_decoding/dec52.html
+
+* Decimal decoding 
+.html html/decimal_decoding/dec6.html
+
+* Binary decoding 
+.html html/decimal_decoding/bin1.html
+
+* Binary  decoding 
+.html html/decimal_decoding/bin2.html
+
+* Binary decoding 
+.html html/decimal_decoding/bin3.html
+
+
+* Decimal vs Floating point
+.image img/Add_new2.png 500 _
+
+* Software vs Hardware
 .image img/Add_new.png 500 _
 
+* 
+.image img/not_all_implementations.jpg 600 _
+: TAKE A BREAK
+
 * Binary floating point Add
-    func Add(x, y float64) float64 {
-            return x + y
-        }
+.image code/Add.png 125 _
+
+: 250 times slower than floating point addition
 
 * Binary floating point Assembler
-    func Add(x, y float64) float64 {
-        return x + y
-    }
- 
-    "".Add STEXT nosplit size=23 args=0x18 locals=0x0
-    TEXT	"".Add(SB), NOSPLIT|ABIInternal, $0-24
-    FUNCDATA	$0, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
-    FUNCDATA	$1, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
-    FUNCDATA	$3, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
-    PCDATA	$2, $0
-    PCDATA	$0, $0
-    MOVSD	"".x+8(SP), X0
-    MOVSD	"".y+16(SP), X1
-    ADDSD	X1, X0
-    MOVSD	X0, "".~r2+24(SP)
-    RET
+.image code/Add.png 125 _
+.image code/Add.asm.png 375 _
 
-* ADDSD
-"Add Scalar Double-Precision Floating-Point Values"
-
-* Requirements of a number library: Binary floats
-1. Accuracy ✘
-2. Portability ✓
-3. Speed ✓
-
-* A new decimal library in go
-- Follows 2008-r standard
-- Allows for    future hardware support and optimisations
-
-* Arithmetic benchmarks - Add
-.image img/Add_dec.png 500 _
-
+: 7 times slower than software floating point addition
 
 * Binary floating point Assembler
-    func Add(x, y float64) float64 {
-        return x + y
-    }
- 
-    "".Add STEXT nosplit size=23 args=0x18 locals=0x0
-    TEXT    "".Add(SB), NOSPLIT|ABIInternal, $0-24
-    FUNCDATA    $0, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
-    FUNCDATA    $1, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
-    FUNCDATA    $3, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
-    PCDATA    $2, $0
-    PCDATA    $0, $0
-    MOVSD    "".x+8(SP), X0
-    MOVSD    "".y+16(SP), X1
-    ADDSD    X1, X0
-    MOVSD    X0, "".~r2+24(SP)
-    RET
+.image code/Add.png 125 _
+.image code/Add2.asm.png 375 _
 
 * Decimal Arithmetic in Go
-    func (d Decimal64) Add(e Decimal64) Decimal64 {
-        dp := d.getParts()
-        ep := e.getParts()
-        if dec := propagateNan(&dp, &ep); dec != nil {
-            return *dec
-        }
-        if dp.fl == flInf || ep.fl == flInf {
-            // Check infinities
-        }
-        // ...
-        // Match scales
-        var rndStatus discardedDigit
-        dp.matchScales128(&ep)
-        ans := dp.add128(&ep)
-        rndStatus = ans.roundToLo()
-        if ans.exp < -expOffset {
-            rndStatus = ans.rescale(-expOffset)
-        }
-        // Do the calculation ...
-        ans.significand.lo = ctx.roundingMode.round(ans.significand.lo, rndStatus)
-        if ans.exp >= -expOffset && ans.significand.lo != 0 {
-            ans.exp, ans.significand.lo = renormalize(ans.exp, ans.significand.lo)
-        }
-        if ans.exp > expMax || ans.significand.lo > maxSig {
-            return infinities[ans.sign]
-        }
-        return newFromParts(ans.sign, ans.exp, ans.significand.lo)
-    }
+.image code/DecAdd.png _ 923
 
-* Decimal Arithmetic in Assembler
-.code ../examples/AddDec.asm
+* Decimal Arithmetic in Go
+.image code/Dec1.asm.png _ 923
 
-* Decimal Arithmetic in Assembler
-.code ../examples/AddDec.asm  /^// PT 2/,/// PT 3/
+* Decimal Arithmetic in Go
+.image code/Dec2.asm.png _ 923
 
-* Decimal Arithmetic in Assembler
-.code ../examples/AddDec.asm  /^// PT 3/,
+* Decimal Arithmetic in Go
+.image code/Dec3.asm.png _ 923
 
-* Requirements of a number library: Decimal floats
-1. Accuracy ✓
-2. Portability ✓
-3. Speed ✗ (not yet)
+* Decimal Arithmetic in Go
+.image code/Dec4.asm.png _ 923
+
+: It's CRAZY to think that 55% of databases use this type; consider the inefficency.
+: IBM research Using this method takes 50-90% more processing resources instead of using a builtin type
+
+* Is there a better way?
+: Relate back to the missile defence system
+: Maybe if we rething the question a little bit:
+: Going back to our clock example, lets try to use ints
+
+* A better solution
+.image code/intTime.go.png 345 _
+
+* A better solution
+.image code/intTime.go.png 345 _
+.image code/intTime_ans.png 175 _
+: This doesn't work for everything; calculating anything fractional is now a problem if your base unit changes and can be quite messy
+
+* Conclusion
+- Use floats if you really need performance and not precision
+- Use ints as your smallest unit if you need precision and performance
+- Use decimals for everything else
+- Come contribute
+github.com/anz-bank/decimal
+
+: eirclargergren/decimal
 
 * Looking forward
 - More optimisation
-- Implement 128 and 64 bit
+- Implement 128 bit
 - Assembler optimisations
 
-* Links
+: I know every man and his dog might want to put something in the go core, 
+: And over the years there have been a number of proposals to get a decimal type in the go core
+: Reasons stem from intuativness; since we think in base 10 shouldn't go have a type which supports that thinking 
+: especially in a programming language which boasts "rediness out of the box"
+: other arguments focus on other number types;
+: Go already has a complex type; a decimal data type would most definitely be used more than that
 
-- Benchmarking
-.link https://github.com/joshcarp/decimal-slides
-- Github
-.link https://github.com/anz-bank/decimal
+* Core
+.image img/proposal.png 500 _
+: There has been an issue open on golang go's github, and it never got closed
 
-- Survey from reddit user kardianos
+: But maybe not; maybe decimals just aren't efficent enough due to their lacking hardware support in order to grant 
+: them into the Go Core
+
+
+
+
+
+
+
