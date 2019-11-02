@@ -158,8 +158,6 @@ padding: 1em 1em 1.5em 1em;
     font-size: 1.5em;
 }
 
-
-
 .standard_number .float_sign, .standard_number .float_exp, .standard_number .float_mant {
     padding: 0.1em 0.15em;
     margin: 0 0.05em;
@@ -176,13 +174,15 @@ padding: 1em 1em 1.5em 1em;
 }
 
 
-@media only screen and (max-width: 800px) {
+
+@media only screen, print and (max-width: 800px) {
     .standard_number .standard_digit {
         font-size: 1.7em;
     }
  }
 
- @media only screen and (max-width: 700px) {
+
+ @media only screen, print and (max-width: 700px) {
     .standard_number .standard_digit {
         font-size: 1.5em;
     }
@@ -193,7 +193,8 @@ padding: 1em 1em 1.5em 1em;
     }
  }
 
-@media only screen and (max-width: 550px) {
+
+ @media only screen, print and (max-width: 550px) {
     .standard_number .standard_digit {
         font-size: 1.2em;
     }
@@ -204,7 +205,8 @@ padding: 1em 1em 1.5em 1em;
     }
  }
 
- @media only screen and (max-width: 420px) {
+
+ @media only screen, print and (max-width: 420px) {
 
     .float_bit_number, .float_int_number {
         font-size:1.15em;
@@ -232,7 +234,7 @@ padding: 1em 1em 1.5em 1em;
     }
  }
 
- @media only screen and (max-width: 360px) {
+ @media only screen, print and (max-width: 360px) {
 
     .big_number .standard_digit {
         font-size: 2.8em;
