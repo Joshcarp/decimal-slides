@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.66.0" />
+    <meta charset="utf-8">
+<title>My presentation</title>
+
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/presentations/reveal-js/css/reset.css">
+<link rel="stylesheet" href="/presentations/reveal-js/css/reveal.css"><link rel="stylesheet" href="/presentations/reveal-js/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="/presentations/highlight-js/default.min.css">
+    
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+  
+
+    <section><h1 id="go-for-decimals">Go for Decimals</h1>
+<p>Tags: decimal, floating point, fixed precision, IEEE 754R</p>
+<h2 id="joshuacarpeggianianzcom">Joshua Carpeggiani
+Software Engineer, ANZ
+<a href="mailto:joshua.carpeggiani@anz.com">joshua.carpeggiani@anz.com</a></h2>
+
+
+
+<aside class="notes"><dl>
+<dt>Let me set the scene, it is February 1991, a missile has been launched with a military base in its sights. An anti air defence system kicks into gear ready to blow the enemy ballistic out of the sky, saving those living in the base.</dt>
+<dt>The system turns on scans the sky for an incoming missile, looking at the part of the sky that sent it the trigger to activate.</dt>
+<dd>It looks and looks, and looks, and looks.</dd>
+<dd>A problem occurs; a floating point rounding error caused the internal clock to be off by a third of a second.</dd>
+<dd>Under some circumstances, such inaccuracy might be unnoticeable but when attempting to scan the sky for an object moving five times the speed of sound the result was less than desirable.</dd>
+<dd>
+<p>The system can’t find anything. It turns off.</p>
+</dd>
+<dd>The missile hits the base moments later.</dd>
+<dd>
+<p>Less than 24 hours later a software update was deployed to fix the bug that caused the issue.</p>
+</dd>
+<dd>
+<p>Melbourne university</p>
+</dd>
+<dd>Part time Software engineer</dd>
+<dd>Summer internship</dd>
+<dd>Weird story to how I got going</dd>
+<dd>i met my now colleague in a fuit and veg shop and we started talking about software engineering</dd>
+<dd>She mentioned that some jolly old fellow named marcelo was trying to get an summer internship program going on decimals and go</dd>
+<dd>A project he started on .</dd>
+<dd>A couple of weeks go by, some emails have been exchanged and the project finally gets the go-ahead.</dd>
+<dd>I remember I was on the side of the road trying to hitchhike from melbourne to the gold coast</dd>
+<dd>and I’d been stuck for a couple of hours at this point and was checking my emails to keep my sanity.</dd>
+<dd>After this I frantically started going through &ldquo;A tour of go&rdquo; whilst on my journey</dd>
+</dl>
+</aside>
+</section><section>
+<p><img src="img/tour.png" alt=""></p>
+
+
+
+<aside class="notes"><dl>
+<dt>: Got to the gold coast in the end, working on my &ldquo;proper&rdquo; software engineering project</dt>
+<dd>
+<p>Today I want to talk about floating point numbers; their pitfalls and strengths</p>
+</dd>
+<dd>Decimals; Possibly a better alternative; the implications of using decimals and a bit about the project I&rsquo;ve been part of</dd>
+</dl>
+</aside>
+</section><section>
+<h2 id="floating-point-numbers">Floating point numbers</h2>
+<p>.image code/first_example.png 258 _</p>
+</section><section>
+<h2 id="floating-point-numbers-1">Floating point numbers</h2>
+<p>.image code/first_example.png 258 _</p>
+<p>.image code/first_ans1.png _ 300</p>
+</section><section>
+<h2 id="floating-point-numbers-2">Floating point numbers</h2>
+<p>.image code/second.png 400 _</p>
+</section><section>
+<h2 id="floating-point-numbers-3">Floating point numbers</h2>
+<dl>
+<dt>.image code/second.png 400 _</dt>
+<dt>.image code/second_ans.png _ 500</dt>
+<dd>
+<p>41 seconds going at 5 times the speed of sound is long enough to travel 71 kms</p>
+</dd>
+</dl>
+</section><section>
+<h2 id="not-all-numbering-systems-are-created-equal">Not all numbering systems are created equal</h2>
+</section><section>
+<h2 id="binary">Binary</h2>
+<h2 id="html_images1png"><img src="html_images/1.png" alt=""></h2>
+<h2 id="binary-1">Binary</h2>
+<p><img src="html_images/2.png" alt=""></p>
+</section><section>
+<h2 id="binary-2">Binary</h2>
+<p><img src="html_images/3.png" alt=""></p>
+</section><section>
+<h2 id="binary-3">Binary</h2>
+<p><img src="html_images/4.png" alt=""></p>
+</section><section>
+<h2 id="binary-4">Binary</h2>
+<p><img src="html_images/5.png" alt=""></p>
+</section><section>
+<h2 id="binary-5">Binary</h2>
+<p><img src="html_images/6.png" alt=""></p>
+</section><section>
+<h2 id="binary-6">Binary</h2>
+<p><img src="html_images/7.png" alt=""></p>
+</section><section>
+<h2 id="binary-7">Binary</h2>
+<p><img src="html_images/8.png" alt=""></p>
+</section><section>
+<h2 id="binary-floating-point-numbers">Binary floating point numbers</h2>
+<p><img src="html_images/9.png" alt=""></p>
+</section><section>
+<h2 id="binary-8">Binary</h2>
+<p><img src="html_images/10.png" alt=""></p>
+</section><section>
+<h2 id="binary-9">Binary</h2>
+<p><img src="html_images/11.png" alt=""></p>
+</section><section>
+<h2 id="binary-10">Binary</h2>
+<p><img src="html_images/12.png" alt=""></p>
+</section><section>
+<h2 id="binary-11">Binary</h2>
+<p><img src="html_images/13.png" alt=""></p>
+</section><section>
+<h2 id="why">Why?</h2>
+<p><img src="img/BinDec.png" alt="">
+
+
+
+<aside class="notes"><dl>
+<dt>: Lets take factors of 10; 5 and 2.</dt>
+<dd>Because they have symbols, their inverses also have exact representations too</dd>
+<dd>
+<p>This means that all binary numbers can be represented in a decimal system, not vice versa</p>
+</dd>
+</dl>
+</aside></p>
+</section><section>
+<h2 id="another-decimal-library">Another Decimal library</h2>
+<p><a href="">http://www.github.com/anz-bank/decimal</a></p>
+<ul>
+<li>Project Goal: Implement a 64 &amp; 128 bit decimal floating point library</li>
+<li>Conform as closely to IEEE 754-2008 standard as practical</li>
+</ul>
+
+
+
+<aside class="notes"><dl>
+<dt>: Other projects exist; although they use different encodings</dt>
+<dd>This one was chosen for a couple of reasons</dd>
+<dd><ol>
+<li>Speed; Fitting in everything in a 64 and 128 bit uint means that no dealing with slices like other types</li>
+</ol>
+</dd>
+<dd><ol start="2">
+<li>Portability: Using a standard encoding allows for portability across programs; if you need to store a piece of data, but don&rsquo;t want to store it as an intermediate string there&rsquo;s no need to.</li>
+</ol>
+</dd>
+<dd>once all; language agnostic</dd>
+<dd><ol start="2">
+<li>Extendibility; Using a fixed precision allows for</li>
+</ol>
+</dd>
+</dl>
+</aside>
+</section><section>
+<h2 id="scientific-notation">Scientific notation</h2>
+<p><img src="html_images/14.png" alt=""></p>
+</section><section>
+<h2 id="scientific-notation-1">Scientific notation</h2>
+<p><img src="html_images/15.png" alt=""></p>
+</section><section>
+<h2 id="scientific-notation-2">Scientific notation</h2>
+<p><img src="html_images/16.png" alt=""></p>
+</section><section>
+<h2 id="scientific-notation-3">Scientific notation</h2>
+<p><img src="html_images/17.png" alt=""></p>
+</section><section>
+<h2 id="scientific-notation-4">Scientific notation</h2>
+<p><img src="html_images/18.png" alt=""></p>
+</section><section>
+<h2 id="scientific-notation-5">Scientific notation</h2>
+<p><img src="html_images/19.png" alt=""></p>
+</section><section>
+<h2 id="another-decimal-library-1">Another Decimal library</h2>
+<p><img src="code/decimal_example.png" alt=""></p>
+</section><section>
+<h2 id="another-decimal-library-2">Another Decimal library</h2>
+<h2 id="codedecimal_anspng"><img src="code/decimal_example.png" alt="">
+<img src="code/decimal_ans.png" alt=""></h2>
+<h2 id="another-decimal-library-3">Another Decimal library</h2>
+<p><img src="code/decimalTime.png" alt=""></p>
+</section><section>
+<h2 id="another-decimal-library-4">Another Decimal library</h2>
+<p><img src="code/decimalTime.png" alt="">
+<img src="code/decimal_time_ans.png" alt=""></p>
+</section><section>
+<h2 id="applause">Applause</h2>
+</section><section>
+<h2 id="applause-1">Applause</h2>
+</section><section>
+<p><img src="img/gopher.gif" alt=""></p>
+</section><section>
+<h2 id="heading"></h2>
+<p><img src="img/gophers.png" alt=""></p>
+</section><section>
+<h2 id="the-end">The End?</h2>
+</section><section>
+<h2 id="the-end-1">The End?</h2>
+<ul>
+<li>Use decimals for everything?</li>
+</ul>
+</section><section>
+<h2 id="the-end-2">The End?</h2>
+<ul>
+<li>Use decimals for everything?</li>
+<li>Why doesn&rsquo;t everything use this?</li>
+</ul>
+</section><section>
+<h2 id="the-end-3">The End?</h2>
+<ul>
+<li>Use decimals for everything?</li>
+<li>Why doesn&rsquo;t everything use this?</li>
+<li>Are decimals even that efficient?</li>
+</ul>
+<dl>
+<dt>: IBM research; out of a survey in 2007 of enterprise databases;</dt>
+<dd>55% of numeric data was decimal</dd>
+</dl>
+</section><section>
+<h2 id="decimal-decoding">Decimal decoding</h2>
+<p><img src="html_images/20.png" alt=""></p>
+</section><section>
+<h2 id="decimal-decoding-1">Decimal decoding</h2>
+<p><img src="html_images/21.png" alt=""></p>
+</section><section>
+<h2 id="decimal-decoding-2">Decimal decoding</h2>
+<h2 id="html_images22png"><img src="html_images/22.png" alt=""></h2>
+<h2 id="decimal-decoding-3">Decimal decoding</h2>
+<h2 id="html_images23png"><img src="html_images/23.png" alt=""></h2>
+<h2 id="decimal-decoding-4">Decimal decoding</h2>
+<h2 id="html_images24png"><img src="html_images/24.png" alt=""></h2>
+<h2 id="decimal-decoding-5">Decimal decoding</h2>
+<h2 id="html_images25png"><img src="html_images/25.png" alt=""></h2>
+<h2 id="decimal-decoding-6">Decimal decoding</h2>
+<h2 id="html_images26png"><img src="html_images/26.png" alt=""></h2>
+<h2 id="decimal-decoding-7">Decimal decoding</h2>
+<h2 id="html_images27png"><img src="html_images/27.png" alt=""></h2>
+<h2 id="binary-decoding">Binary decoding</h2>
+<h2 id="html_images28png"><img src="html_images/28.png" alt=""></h2>
+<h2 id="binary--decoding">Binary  decoding</h2>
+<h2 id="html_images29png"><img src="html_images/29.png" alt=""></h2>
+<h2 id="binary-decoding-1">Binary decoding</h2>
+<p><img src="html_images/30.png" alt=""></p>
+</section><section>
+<h2 id="decimal-vs-floating-point">Decimal vs Floating point</h2>
+<p><img src="img/Add_new2.png" alt=""></p>
+</section><section>
+<h2 id="software-vs-hardware">Software vs Hardware</h2>
+<p><img src="img/Add_new.png" alt=""></p>
+</section><section>
+<dl>
+<dt><img src="img/not_all_implementations.jpg" alt=""></dt>
+<dd>TAKE A BREAK</dd>
+</dl>
+</section><section>
+<h2 id="binary-floating-point-add">Binary floating point Add</h2>
+<p><img src="code/Add.png" alt="">
+
+
+
+<aside class="notes"><p>: 250 times slower than floating point addition</p>
+<!-- raw HTML omitted -->
+</aside></p>
+</section>
+
+  
+
+
+</div>
+      
+
+    </div>
+<script type="text/javascript" src=/presentations/reveal-hugo/object-assign.js></script>
+
+<a href="/presentations/reveal-js/css/print/" id="print-location" style="display: none;"></a>
+<script type="text/javascript">
+  var printLocationElement = document.getElementById('print-location');
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = printLocationElement.href + (window.location.search.match(/print-pdf/gi) ? 'pdf.css' : 'paper.css');
+  document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<script type="application/json" id="reveal-hugo-site-params">null</script>
+<script type="application/json" id="reveal-hugo-page-params">null</script>
+
+<script src="/presentations/reveal-js/js/reveal.js"></script>
+
+<script type="text/javascript">
+  
+  
+  function camelize(map) {
+    if (map) {
+      Object.keys(map).forEach(function(k) {
+        newK = k.replace(/(\_\w)/g, function(m) { return m[1].toUpperCase() });
+        if (newK != k) {
+          map[newK] = map[k];
+          delete map[k];
+        }
+      });
+    }
+    return map;
+  }
+  
+  var revealHugoDefaults = { center: true, controls: true, history: true, progress: true, transition: "slide" };
+  var revealHugoSiteParams = JSON.parse(document.getElementById('reveal-hugo-site-params').innerHTML);
+  var revealHugoPageParams = JSON.parse(document.getElementById('reveal-hugo-page-params').innerHTML);
+  
+  var options = Object.assign({},
+    camelize(revealHugoDefaults),
+    camelize(revealHugoSiteParams),
+    camelize(revealHugoPageParams));
+  Reveal.initialize(options);
+</script>
+
+
+  
+  
+  <script type="text/javascript" src="/presentations/reveal-js/plugin/markdown/marked.js"></script>
+  
+  <script type="text/javascript" src="/presentations/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/presentations/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/presentations/reveal-js/plugin/zoom-js/zoom.js"></script>
+  
+  
+  <script type="text/javascript" src="/presentations/reveal-js/plugin/notes/notes.js"></script>
+
+
+
+    
+    
+  </body>
+</html>
