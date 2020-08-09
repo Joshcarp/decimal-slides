@@ -4347,7 +4347,7 @@ go.info."".fmul64 SDWARFINFO size=401
 	0x0190 00                                               .
 	rel 11+8 t=1 "".fmul64+0
 	rel 19+8 t=1 "".fmul64+1306
-	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softAdd.go+0
+	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softAdd.go+0
 	rel 39+4 t=28 go.info.bool+0
 	rel 52+4 t=28 go.info.bool+0
 	rel 65+4 t=28 go.info.bool+0
@@ -4368,7 +4368,7 @@ go.info."".fmul64 SDWARFINFO size=401
 	rel 267+4 t=28 go.info.uint64+0
 	rel 275+4 t=28 go.info."".mullu$abstract+0
 	rel 279+4 t=28 go.range."".fmul64+0
-	rel 283+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softAdd.go+0
+	rel 283+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softAdd.go+0
 	rel 292+4 t=28 go.info."".mullu$abstract+10
 	rel 301+4 t=28 go.info."".mullu$abstract+18
 	rel 310+4 t=28 go.info."".mullu$abstract+26
@@ -4412,7 +4412,7 @@ go.info."".funpack64 SDWARFINFO size=121
 	0x0070 15 00 00 00 00 02 91 21 00                       .......!.
 	rel 14+8 t=1 "".funpack64+0
 	rel 22+8 t=1 "".funpack64+307
-	rel 32+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 32+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 42+4 t=28 go.info.uint64+0
 	rel 56+4 t=28 go.info.uint64+0
 	rel 71+4 t=28 go.info.uint64+0
@@ -4438,7 +4438,7 @@ go.info."".funpack32 SDWARFINFO size=121
 	0x0070 35 00 00 00 00 02 91 19 00                       5........
 	rel 14+8 t=1 "".funpack32+0
 	rel 22+8 t=1 "".funpack32+264
-	rel 32+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 32+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 42+4 t=28 go.info.uint32+0
 	rel 56+4 t=28 go.info.uint32+0
 	rel 71+4 t=28 go.info.uint32+0
@@ -4466,7 +4466,7 @@ go.info."".fpack64 SDWARFINFO size=154
 	0x0090 01 55 00 00 00 00 02 91 20 00                    .U...... .
 	rel 12+8 t=1 "".fpack64+0
 	rel 20+8 t=1 "".fpack64+827
-	rel 30+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 30+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 44+4 t=28 go.info.uint64+0
 	rel 59+4 t=28 go.info.uint64+0
 	rel 73+4 t=28 go.info.int+0
@@ -4502,7 +4502,7 @@ go.info."".fpack32 SDWARFINFO size=162
 	0x00a0 18 00                                            ..
 	rel 12+8 t=1 "".fpack32+0
 	rel 20+8 t=1 "".fpack32+732
-	rel 30+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 30+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 45+4 t=28 go.info.uint32+0
 	rel 61+4 t=28 go.info.uint32+0
 	rel 76+4 t=28 go.info.int+0
@@ -4543,7 +4543,7 @@ go.info."".fadd64 SDWARFINFO size=249
 	0x00f0 01 00 00 00 00 02 91 10 00                       .........
 	rel 11+8 t=1 "".fadd64+0
 	rel 19+8 t=1 "".fadd64+1426
-	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 40+4 t=28 go.info.bool+0
 	rel 54+4 t=28 go.info.bool+0
 	rel 68+4 t=28 go.info.bool+0
@@ -4584,14 +4584,14 @@ go.info."".fsub64 SDWARFINFO size=113
 	0x0070 00                                               .
 	rel 11+8 t=1 "".fsub64+0
 	rel 19+8 t=1 "".fsub64+133
-	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 40+4 t=28 go.info.uint64+0
 	rel 52+4 t=28 go.info.uint64+0
 	rel 67+4 t=28 go.info.uint64+0
 	rel 75+4 t=28 go.info."".fneg64$abstract+0
 	rel 79+8 t=1 "".fsub64+57
 	rel 87+8 t=1 "".fsub64+67
-	rel 95+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 95+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 104+4 t=28 go.info."".fneg64$abstract+11
 go.range."".fsub64 SDWARFRANGE size=0
 go.isstmt."".fsub64 SDWARFMISC size=0
@@ -4630,7 +4630,7 @@ go.info."".fdiv64 SDWARFINFO size=255
 	0x00f0 7e 72 32 00 01 fa 01 00 00 00 00 02 91 10 00     ~r2............
 	rel 11+8 t=1 "".fdiv64+0
 	rel 19+8 t=1 "".fdiv64+1015
-	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 40+4 t=28 go.info.bool+0
 	rel 54+4 t=28 go.info.bool+0
 	rel 68+4 t=28 go.info.bool+0
@@ -4669,7 +4669,7 @@ go.info."".f64to32 SDWARFINFO size=146
 	0x0090 08 00                                            ..
 	rel 12+8 t=1 "".f64to32+0
 	rel 20+8 t=1 "".f64to32+312
-	rel 30+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 30+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 41+4 t=28 go.info.bool+0
 	rel 55+4 t=28 go.info.bool+0
 	rel 71+4 t=28 go.info.uint32+0
@@ -4697,7 +4697,7 @@ go.info."".f32to64 SDWARFINFO size=145
 	0x0090 00                                               .
 	rel 12+8 t=1 "".f32to64+0
 	rel 20+8 t=1 "".f32to64+302
-	rel 30+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 30+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 41+4 t=28 go.info.bool+0
 	rel 55+4 t=28 go.info.bool+0
 	rel 69+4 t=28 go.info.uint32+0
@@ -4728,7 +4728,7 @@ go.info."".fcmp64 SDWARFINFO size=200
 	0x00c0 00 00 00 00 02 91 14 00                          ........
 	rel 11+8 t=1 "".fcmp64+0
 	rel 19+8 t=1 "".fcmp64+844
-	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 40+4 t=28 go.info.bool+0
 	rel 54+4 t=28 go.info.bool+0
 	rel 68+4 t=28 go.info.bool+0
@@ -4764,7 +4764,7 @@ go.info."".f64toint SDWARFINFO size=145
 	0x0090 00                                               .
 	rel 13+8 t=1 "".f64toint+0
 	rel 21+8 t=1 "".f64toint+549
-	rel 31+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 31+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 42+4 t=28 go.info.bool+0
 	rel 56+4 t=28 go.info.bool+0
 	rel 70+4 t=28 go.info.uint64+0
@@ -4792,7 +4792,7 @@ go.info."".fintto64 SDWARFINFO size=92
 	0x0050 00 01 f3 02 00 00 00 00 02 91 08 00              ............
 	rel 13+8 t=1 "".fintto64+0
 	rel 21+8 t=1 "".fintto64+169
-	rel 31+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 31+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 44+4 t=28 go.info.uint64+0
 	rel 57+4 t=28 go.info.uint64+0
 	rel 72+4 t=28 go.info.int64+0
@@ -4852,7 +4852,7 @@ go.info."".divlu SDWARFINFO size=261
 	0x0100 00 02 91 20 00                                   ... .
 	rel 10+8 t=1 "".divlu+0
 	rel 18+8 t=1 "".divlu+857
-	rel 28+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 28+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 40+4 t=28 go.info.uint64+0
 	rel 55+4 t=28 go.info.uint64+0
 	rel 71+4 t=28 go.info.uint64+0
@@ -4888,7 +4888,7 @@ go.info."".fadd32 SDWARFINFO size=75
 	0x0040 01 c1 03 00 00 00 00 02 91 08 00                 ...........
 	rel 11+8 t=1 "".fadd32+0
 	rel 19+8 t=1 "".fadd32+151
-	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 40+4 t=28 go.info.uint32+0
 	rel 52+4 t=28 go.info.uint32+0
 	rel 67+4 t=28 go.info.uint32+0
@@ -4905,7 +4905,7 @@ go.info."".fmul32 SDWARFINFO size=75
 	0x0040 01 c5 03 00 00 00 00 02 91 08 00                 ...........
 	rel 11+8 t=1 "".fmul32+0
 	rel 19+8 t=1 "".fmul32+151
-	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 40+4 t=28 go.info.uint32+0
 	rel 52+4 t=28 go.info.uint32+0
 	rel 67+4 t=28 go.info.uint32+0
@@ -4922,7 +4922,7 @@ go.info."".fdiv32 SDWARFINFO size=75
 	0x0040 01 c9 03 00 00 00 00 02 91 08 00                 ...........
 	rel 11+8 t=1 "".fdiv32+0
 	rel 19+8 t=1 "".fdiv32+151
-	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 29+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 40+4 t=28 go.info.uint32+0
 	rel 52+4 t=28 go.info.uint32+0
 	rel 67+4 t=28 go.info.uint32+0
@@ -4941,7 +4941,7 @@ go.info."".feq32 SDWARFINFO size=102
 	0x0060 00 00 02 91 08 00                                ......
 	rel 10+8 t=1 "".feq32+0
 	rel 18+8 t=1 "".feq32+196
-	rel 28+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 28+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 40+4 t=28 go.info.bool+0
 	rel 54+4 t=28 go.info.int32+0
 	rel 67+4 t=28 go.info.uint32+0
@@ -4962,7 +4962,7 @@ go.info."".fgt32 SDWARFINFO size=102
 	0x0060 00 00 02 91 08 00                                ......
 	rel 10+8 t=1 "".fgt32+0
 	rel 18+8 t=1 "".fgt32+196
-	rel 28+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 28+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 40+4 t=28 go.info.bool+0
 	rel 54+4 t=28 go.info.int32+0
 	rel 67+4 t=28 go.info.uint32+0
@@ -4983,7 +4983,7 @@ go.info."".fge32 SDWARFINFO size=102
 	0x0060 00 00 02 91 08 00                                ......
 	rel 10+8 t=1 "".fge32+0
 	rel 18+8 t=1 "".fge32+196
-	rel 28+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 28+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 40+4 t=28 go.info.bool+0
 	rel 54+4 t=28 go.info.int32+0
 	rel 67+4 t=28 go.info.uint32+0
@@ -5004,7 +5004,7 @@ go.info."".feq64 SDWARFINFO size=102
 	0x0060 00 00 02 91 10 00                                ......
 	rel 10+8 t=1 "".feq64+0
 	rel 18+8 t=1 "".feq64+157
-	rel 28+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 28+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 40+4 t=28 go.info.bool+0
 	rel 54+4 t=28 go.info.int32+0
 	rel 67+4 t=28 go.info.uint64+0
@@ -5025,7 +5025,7 @@ go.info."".fgt64 SDWARFINFO size=102
 	0x0060 00 00 02 91 10 00                                ......
 	rel 10+8 t=1 "".fgt64+0
 	rel 18+8 t=1 "".fgt64+157
-	rel 28+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 28+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 40+4 t=28 go.info.bool+0
 	rel 54+4 t=28 go.info.int32+0
 	rel 67+4 t=28 go.info.uint64+0
@@ -5046,7 +5046,7 @@ go.info."".fge64 SDWARFINFO size=102
 	0x0060 00 00 02 91 10 00                                ......
 	rel 10+8 t=1 "".fge64+0
 	rel 18+8 t=1 "".fge64+157
-	rel 28+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 28+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 40+4 t=28 go.info.bool+0
 	rel 54+4 t=28 go.info.int32+0
 	rel 67+4 t=28 go.info.uint64+0
@@ -5065,7 +5065,7 @@ go.info."".fint32to32 SDWARFINFO size=66
 	0x0040 08 00                                            ..
 	rel 15+8 t=1 "".fint32to32+0
 	rel 23+8 t=1 "".fint32to32+99
-	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 44+4 t=28 go.info.int32+0
 	rel 58+4 t=28 go.info.uint32+0
 go.range."".fint32to32 SDWARFRANGE size=0
@@ -5081,7 +5081,7 @@ go.info."".fint32to64 SDWARFINFO size=66
 	0x0040 08 00                                            ..
 	rel 15+8 t=1 "".fint32to64+0
 	rel 23+8 t=1 "".fint32to64+84
-	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 44+4 t=28 go.info.int32+0
 	rel 58+4 t=28 go.info.uint64+0
 go.range."".fint32to64 SDWARFRANGE size=0
@@ -5096,7 +5096,7 @@ go.info."".fint64to32 SDWARFINFO size=66
 	0x0040 08 00                                            ..
 	rel 15+8 t=1 "".fint64to32+0
 	rel 23+8 t=1 "".fint64to32+99
-	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 44+4 t=28 go.info.int64+0
 	rel 58+4 t=28 go.info.uint32+0
 go.range."".fint64to32 SDWARFRANGE size=0
@@ -5112,7 +5112,7 @@ go.info."".fint64to64 SDWARFINFO size=66
 	0x0040 08 00                                            ..
 	rel 15+8 t=1 "".fint64to64+0
 	rel 23+8 t=1 "".fint64to64+84
-	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 44+4 t=28 go.info.int64+0
 	rel 58+4 t=28 go.info.uint64+0
 go.range."".fint64to64 SDWARFRANGE size=0
@@ -5127,7 +5127,7 @@ go.info."".f32toint32 SDWARFINFO size=80
 	0x0040 0f 7e 72 31 00 01 fb 03 00 00 00 00 02 91 08 00  .~r1............
 	rel 15+8 t=1 "".f32toint32+0
 	rel 23+8 t=1 "".f32toint32+109
-	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 45+4 t=28 go.info.int64+0
 	rel 58+4 t=28 go.info.uint32+0
 	rel 72+4 t=28 go.info.int32+0
@@ -5144,7 +5144,7 @@ go.info."".f32toint64 SDWARFINFO size=80
 	0x0040 0f 7e 72 31 00 01 80 04 00 00 00 00 02 91 08 00  .~r1............
 	rel 15+8 t=1 "".f32toint64+0
 	rel 23+8 t=1 "".f32toint64+111
-	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 45+4 t=28 go.info.int64+0
 	rel 58+4 t=28 go.info.uint32+0
 	rel 72+4 t=28 go.info.int64+0
@@ -5161,7 +5161,7 @@ go.info."".f64toint32 SDWARFINFO size=80
 	0x0040 0f 7e 72 31 00 01 85 04 00 00 00 00 02 91 08 00  .~r1............
 	rel 15+8 t=1 "".f64toint32+0
 	rel 23+8 t=1 "".f64toint32+92
-	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 45+4 t=28 go.info.int64+0
 	rel 58+4 t=28 go.info.uint64+0
 	rel 72+4 t=28 go.info.int32+0
@@ -5178,7 +5178,7 @@ go.info."".f64toint64 SDWARFINFO size=80
 	0x0040 0f 7e 72 31 00 01 8a 04 00 00 00 00 02 91 08 00  .~r1............
 	rel 15+8 t=1 "".f64toint64+0
 	rel 23+8 t=1 "".f64toint64+94
-	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 33+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 45+4 t=28 go.info.int64+0
 	rel 58+4 t=28 go.info.uint64+0
 	rel 72+4 t=28 go.info.int64+0
@@ -5196,7 +5196,7 @@ go.info."".f64touint64 SDWARFINFO size=91
 	0x0050 01 8f 04 00 00 00 00 02 91 08 00                 ...........
 	rel 16+8 t=1 "".f64touint64+0
 	rel 24+8 t=1 "".f64touint64+116
-	rel 34+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 34+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 44+4 t=28 go.info.uint64+0
 	rel 56+4 t=28 go.info.float64+0
 	rel 69+4 t=28 go.info.float64+0
@@ -5215,7 +5215,7 @@ go.info."".f32touint64 SDWARFINFO size=91
 	0x0050 01 98 04 00 00 00 00 02 91 08 00                 ...........
 	rel 16+8 t=1 "".f32touint64+0
 	rel 24+8 t=1 "".f32touint64+116
-	rel 34+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 34+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 44+4 t=28 go.info.float32+0
 	rel 56+4 t=28 go.info.uint64+0
 	rel 69+4 t=28 go.info.float32+0
@@ -5256,12 +5256,12 @@ go.info."".fuint64to32 SDWARFINFO size=117
 	0x0070 02 91 58 00 00                                   ..X..
 	rel 16+8 t=1 "".fuint64to32+0
 	rel 24+8 t=1 "".fuint64to32+173
-	rel 34+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 34+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 45+4 t=28 go.info.uint64+0
 	rel 59+4 t=28 go.info.float32+0
 	rel 67+4 t=28 go.info."".fuint64to64$abstract+0
 	rel 71+4 t=28 go.range."".fuint64to32+0
-	rel 75+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/softFloat/softFloat.go+0
+	rel 75+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/softFloat/softFloat.go+0
 	rel 84+4 t=28 go.info."".fuint64to64$abstract+16
 	rel 92+4 t=28 go.info."".fuint64to64$abstract+24
 	rel 100+4 t=28 go.info."".fuint64to64$abstract+33

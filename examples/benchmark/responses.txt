@@ -1,6 +1,6 @@
 goos: linux
 goarch: amd64
-pkg: github.com/Joshcarp/decimal-slides/examples/benchmark
+pkg: github.com/Joshcarp/talks-decimal/examples/benchmark
 
 BenchmarkDecimal/ddAdd.decTest_float64-4               1000000000               0.225 ns/op
 BenchmarkDecimal/ddAdd.decTest_softFloat64-4            91704010                11.7 ns/op

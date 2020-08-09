@@ -1,4 +1,4 @@
-# decimal-slides
+# talks-decimal
 Presentation currently under development, no live version available
 
 GAE_ENV=standard go run .
@@ -44,4 +44,4 @@ Notes are in a google doc:
 run benchmarks with
 `go test -bench=. -v` from the `examples/benchmark` directory
 or run
-`go test ./examples/benchmark/ -bench=. -v` from the `decimal-slides` directory
+`go test ./examples/benchmark/ -bench=. -v` from the `talks-decimal` directory

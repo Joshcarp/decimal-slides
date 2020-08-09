@@ -151,7 +151,7 @@ Note: these benchmarks are testing edgecases
 - shopspring/decimal
 - ericlagergren/decimal
 Benchmarks are located at
-.link https://github.com/joshcarp/decimal-slides
+.link https://github.com/joshcarp/talks-decimal
 
 * Arithmetic benchmarks - Multiply
 
@@ -245,7 +245,7 @@ Expands
 .link https://ciechanow.ski/exposing-floating-point/
 
 - Benchmarking
-.link https://github.com/joshcarp/decimal-slides
+.link https://github.com/joshcarp/talks-decimal
 - Github
 .link https://github.com/anz-bank/decimal
 

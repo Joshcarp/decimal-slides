@@ -31,7 +31,7 @@ go.info."".Mul SDWARFINFO size=70
 	0x0040 00 00 00 00 00 00                                ......
 	rel 8+8 t=1 "".Mul+0
 	rel 16+8 t=1 "".Mul+23
-	rel 26+4 t=29 gofile../Users/carpeggj/Documents/work/decimal-slides/examples/mul/mul.go+0
+	rel 26+4 t=29 gofile../Users/carpeggj/Documents/work/talks-decimal/examples/mul/mul.go+0
 	rel 36+4 t=28 go.info.float64+0
 	rel 40+4 t=28 go.loc."".Mul+0
 	rel 49+4 t=28 go.info.float64+0

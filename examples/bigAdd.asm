@@ -118,7 +118,7 @@ go.info."".Add SDWARFINFO size=67
 	0x0040 00 00 00                                         ...
 	rel 8+8 t=1 "".Add+0
 	rel 16+8 t=1 "".Add+149
-	rel 26+4 t=29 gofile../home/joshcarp/Documents/decimal-slides/examples/bigAdd.go+0
+	rel 26+4 t=29 gofile../home/joshcarp/Documents/talks-decimal/examples/bigAdd.go+0
 	rel 36+4 t=28 go.info.math/big.Float+0
 	rel 47+4 t=28 go.info.math/big.Float+0
 	rel 61+4 t=28 go.info.math/big.Float+0

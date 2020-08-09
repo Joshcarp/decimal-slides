@@ -1,4 +1,4 @@
-module Joshcarp/decimal-slides
+module Joshcarp/talks-decimal
 
 go 1.13
 
